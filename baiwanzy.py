@@ -65,13 +65,14 @@ operating_systems = [OperatingSystem.WINDOWS.value, OperatingSystem.LINUX.value]
 user_agent_rotator = UserAgent(software_names=software_names, operating_systems=operating_systems, limit=100)
 # Get Random User Agent String.
 UA = user_agent_rotator.get_random_user_agent()
-print("Random UA: " + UA)
 #UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
 
 import argparse
 arg_parser = argparse.ArgumentParser(description='Baiwanzy Downloader')
 args = ""
 def scrape_web(url):
+    if args.d:
+        print("Random UA: " + UA)
     try:
         
         if PY3:
@@ -180,7 +181,7 @@ def scrape_web(url):
 
 if __name__ == "__main__":
     arg_parser.add_argument('-d', action='store_true', help='Debug by print the html.')
-    arg_parser.add_argument('-s',  default=-1, type=int, help='Specify the maximum filename size. Abort.')
+    arg_parser.add_argument('-s',  default=-1, type=int, help='Specify the maximum filename size.')
     arg_parser.add_argument('url', nargs='?', help='baiwanzy url') 
     args, remaining  = arg_parser.parse_known_args()
     if ( (args.s != -1) and (args.s < 1) ) or (args.s == 0): #no nid care if user insert -1, just ignore

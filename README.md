@@ -7,6 +7,22 @@ Pick highest quality(movie), create directory(warning if directory exist) and sa
 
 ### Usage (Please ensure you copy-paste the correct format of url in video detail page):
 
+    xb@dnxb:~/Downloads$ python baiwanzy.py --help
+    usage: baiwanzy.py [-h] [-d] [-s S] [url]
+
+    Baiwanzy Downloader
+
+    positional arguments:
+    url         baiwanzy url
+
+    optional arguments:
+    -h, --help  show this help message and exit
+    -d          Debug by print the html.
+    -s S        Specify the maximum filename size.
+    xb@dnxb:~/Downloads$ 
+
+### Example usage (Please ensure you copy-paste the correct format of url in video detail page):
+
     xb@dnxb:~/Downloads$ python baiwanzy.py http://baiwanzy.com/?m=vod-detail-id-25954.html
     Random UA: Mozilla/5.0 (Windows NT 8.0; WOW64) AppleWebKit/536.24 (KHTML, like Gecko) Chrome/32.0.2019.89 Safari/536.24
     [ 1/15 ] episode name: /home/xiaobai/Downloads/包青天再起风云粤语/包青天再起风云粤语_第01集
