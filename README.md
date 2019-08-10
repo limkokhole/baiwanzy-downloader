@@ -1,4 +1,4 @@
-# baiwanzy-downloader
+# 百万资源网下载器 baiwanzy-downloader
 Pick highest quality(movie), create directory(warning if directory exist) and save as relevant filenames automatically with just paste baiwanzy url
 
 ### Usage (Please ensure you copy-paste the correct format of url in video detail page):
