@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals #make python2 act as python3 unicode
 # The MIT License (MIT)
-# Copyright (c) 2018 limkokhole@gmail.com
+# Copyright (c) 2019 limkokhole@gmail.com
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
