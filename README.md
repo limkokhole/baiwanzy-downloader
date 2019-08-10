@@ -5,7 +5,7 @@ Pick highest quality(movie), create directory(warning if directory exist) and sa
 
     pip install youtube_dl
 
-### Usage (Please ensure you copy-paste the correct format of url in video detail page):
+### Usage:
 
     xb@dnxb:~/Downloads$ python baiwanzy.py --help
     usage: baiwanzy.py [-h] [-d] [-s S] [url]
