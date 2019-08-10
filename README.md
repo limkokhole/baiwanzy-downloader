@@ -4,8 +4,6 @@ Pick highest quality(movie), create directory(warning if directory exist) and sa
 ### Requirement:
 
     pip install youtube_dl
-	OR
-    sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 
 ### Usage (Please ensure you copy-paste the correct format of url in video detail page):
 
