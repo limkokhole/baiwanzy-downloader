@@ -165,7 +165,7 @@ def scrape_web(url):
         youtube_dl.utils.std_headers['User-Agent'] = UA
         #youtube_dl.YoutubeDL( params={'-c': '', '--no-mtime': '', 'outtmpl': './%(uploader)s/%(title)s-%(upload_date)s-%(id)s.%(ext)s'} ).download([source_url])
         try:
-            youtube_dl.YoutubeDL( params={'-c': '', '-g': '', '-q': '', '--no-mtime': '', 'outtmpl': episode_name + '.%(ext)s'} ).download([source_url])
+            youtube_dl.YoutubeDL( params={'-c': '', '-q': '', '--no-mtime': '', 'outtmpl': episode_name + '.%(ext)s'} ).download([source_url])
         except youtube_dl.utils.DownloadError:
             print(traceback.format_exc())
             print('Possible reason is filename too long. Please retry with -s <maximum filename size>.')
