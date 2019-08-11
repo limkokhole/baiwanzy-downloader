@@ -44,8 +44,8 @@ else:
     from urllib2 import urlopen, HTTPError
     import urllib2
     input = raw_input
-try: from bs4 import BeautifulSoup, SoupStrainer #python3 #python2 also got, and python need use this or else error when `soup = BeautifulSoup(r, "lxml")` 
-except ImportError: from BeautifulSoup import BeautifulSoup, SoupStrainer #python2
+try: from bs4 import BeautifulSoup #python3 #python2 also got, and python need use this or else error when `soup = BeautifulSoup(r, "lxml")` 
+except ImportError: from BeautifulSoup import BeautifulSoup #python2
 
 
 #https://github.com/limkokhole/random_user_agent
