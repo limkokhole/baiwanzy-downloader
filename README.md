@@ -24,7 +24,6 @@ Pick highest quality(movie), create directory(warning if directory exist) and sa
 ### Example usage (Please ensure you copy-paste the correct format of url in video detail page):
 
     xb@dnxb:~/Downloads$ python baiwanzy.py http://baiwanzy.com/?m=vod-detail-id-25954.html
-    Random UA: Mozilla/5.0 (Windows NT 8.0; WOW64) AppleWebKit/536.24 (KHTML, like Gecko) Chrome/32.0.2019.89 Safari/536.24
     [ 1/15 ] episode name: /home/xiaobai/Downloads/包青天再起风云粤语/包青天再起风云粤语_第01集
     source url: https://videos7.jsyunbf.com/20190722/9DbC2641/index.m3u8
     [generic] index: Requesting header
@@ -94,7 +93,6 @@ Pick highest quality(movie), create directory(warning if directory exist) and sa
 ### If already downloaded before, it will shows warning and skipped, e.g.:
 
     xb@dnxb:~/Downloads$ python baiwanzy.py http://baiwanzy.com/?m=vod-detail-id-21978.html
-    Random UA: Mozilla/5.0 (Windows NT 6.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36
 
     /home/xiaobai/Downloads/降伏魔女的手段 already exists.
                         Are you sure you want to download inside /home/xiaobai/Downloads/降伏魔女的手段  ? [y/n] : y
