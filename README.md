@@ -3,7 +3,7 @@ Pick highest quality(movie), create directory(warning if directory exist) and sa
 
 ### Requirement:
 
-    pip install youtube_dl
+    pip install -r requirements.txt
 
 ### Usage:
 
