@@ -180,7 +180,7 @@ def scrape_web(url):
             sys.exit()
 
 if __name__ == "__main__":
-    arg_parser.add_argument('-d', action='store_true', help='Debug by print the html.')
+    arg_parser.add_argument('-d', action='store_true', help='Debug by print the UA and html.')
     arg_parser.add_argument('-s',  default=-1, type=int, help='Specify the maximum filename size.')
     arg_parser.add_argument('url', nargs='?', help='baiwanzy url') 
     args, remaining  = arg_parser.parse_known_args()

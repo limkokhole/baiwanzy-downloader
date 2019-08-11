@@ -17,7 +17,7 @@ Pick highest quality(movie), create directory(warning if directory exist) and sa
 
     optional arguments:
     -h, --help  show this help message and exit
-    -d          Debug by print the html.
+    -d          Debug by print the UA and html.
     -s S        Specify the maximum filename size.
     xb@dnxb:~/Downloads$ 
 
