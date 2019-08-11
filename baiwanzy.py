@@ -39,18 +39,11 @@ PY3 = sys.version_info[0] >= 3
 if PY3:
     from urllib.request import urlopen
     from urllib.error import HTTPError
-    from urllib.parse import urlparse
     import urllib.request
-    def unicode(mystr): #python3
-        return mystr
-    import html
 else:
     from urllib2 import urlopen, HTTPError
     import urllib2
-    from urlparse import urlparse
     input = raw_input
-    from HTMLParser import HTMLParser
-    html_parser = HTMLParser() #again, don't conflict name with other vars "parser"
 try: from bs4 import BeautifulSoup, SoupStrainer #python3 #python2 also got, and python need use this or else error when `soup = BeautifulSoup(r, "lxml")` 
 except ImportError: from BeautifulSoup import BeautifulSoup, SoupStrainer #python2
 
@@ -77,10 +70,9 @@ def scrape_web(url):
         
         if PY3:
             req = urllib.request.Request(url, data=None, headers={ 'User-Agent': UA })
-            r = urllib.request.urlopen(req).read()
         else:
             req = urllib2.Request(url, headers={ 'User-Agent': UA })
-            r = urllib2.urlopen(req).read()
+        r = urlopen(req).read()
     except Exception as e:
         print(e)
         print("Please check your network OR url.")
