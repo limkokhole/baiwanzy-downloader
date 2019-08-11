@@ -87,7 +87,7 @@ def scrape_web(url):
     for vnames in soup.find_all('div','vodh'):
         #https://stackoverflow.com/questions/22602279/beutifulsoup-parse-get-information-from-child-tag
         #print('Video name: ' + vnames.h2.text)
-        output_f = os.path.basename(vnames.h2.text) #sanity ..
+        output_f = os.path.basename(vnames.h2.text) #sanitize
 
     if not output_f:
         print('No title found, Abort.')
