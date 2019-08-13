@@ -173,10 +173,10 @@ def scrape_web(url):
 
 if __name__ == "__main__":
     arg_parser.add_argument('-d', action='store_true', help='Debug by print the UA and html.')
-    arg_parser.add_argument('-s',  default=-1, type=int, help='Specify the maximum filename size.')
+    arg_parser.add_argument('-s',  type=int, help='Specify the maximum filename size.') #dont put default bcoz we need None to know not pass this arg
     arg_parser.add_argument('url', nargs='?', help='baiwanzy url') 
     args, remaining  = arg_parser.parse_known_args()
-    if ( (args.s != -1) and (args.s < 1) ) or (args.s == 0): #no nid care if user insert -1, just ignore
+    if ( (args.s is not None) and (args.s <= 0) ):
         print('-s ' + str(args.s) + ', please specify a sensible -s maximum filename size. Abort.')
         sys.exit()
     if args.url:
