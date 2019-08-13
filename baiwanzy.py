@@ -118,7 +118,7 @@ def scrape_web(url):
                         #if args.s > 0:
                         #    episode_title = episode_title[-args.s:]
                         final_path = os.path.basename( '_'.join([ output_f, os.path.basename(episode_title)]) )
-                        if args.s > 0:
+                        if args.s is not None: #is not None already > 0 check in main entry code.
                             final_path = final_path[-args.s:]
                         episode_m3u8[ final_path] = source_url
     #downloader = m3u8.Downloader(50)
@@ -126,7 +126,7 @@ def scrape_web(url):
 
     d_name = None
     if len(episode_m3u8) > 1: #is series
-        if args.s > 0:
+        if args.s is not None:
             output_f = output_f[-args.s:]
         output_path_raw = os.path.join(os.getcwd(), output_f)
         d_name = output_path_raw
