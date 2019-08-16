@@ -32,6 +32,7 @@ __email__ = 'limkokhole@gmail.com'
 __status__ = 'Production'
 
 import sys, os, traceback
+import readline #to make input() edit-able by LEFT key
 import youtube_dl
 #import m3u8 #https://github.com/limkokhole/m3u8-Downloader
 
