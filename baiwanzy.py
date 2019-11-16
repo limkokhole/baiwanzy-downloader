@@ -170,10 +170,12 @@ def scrape_web(url):
         except youtube_dl.utils.DownloadError:
             print(traceback.format_exc())
             print('Possible reason is filename too long. Please retry with -s <maximum filename size>.')
-            sys.exit()
+            if not args.i:
+                sys.exit()
 
 if __name__ == "__main__":
     arg_parser.add_argument('-d', action='store_true', help='Debug by print the UA and html.')
+    arg_parser.add_argument('-i', action='store_true', help='Ignore download failure then continue next.')
     arg_parser.add_argument('-s',  type=int, help='Specify the maximum filename size.') #dont put default bcoz we need None to know not pass this arg
     arg_parser.add_argument('url', nargs='?', help='baiwanzy url') 
     args, remaining  = arg_parser.parse_known_args()
